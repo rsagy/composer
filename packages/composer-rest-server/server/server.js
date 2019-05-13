@@ -177,7 +177,9 @@ module.exports = function (composer) {
         if (tls) {
             const cert = fs.readFileSync(composer.tlscert, 'utf8');
             const key = fs.readFileSync(composer.tlskey, 'utf8');
-            server = https.createServer({ cert, key }, app);
+            var options = {key: key, cert: cert, secureOptions: require('constants').SSL_OP_NO_TLSv1}
+            server = https.createServer(options, app);
+            // ravid old use server = https.createServer({ cert, key }, app);
         } else {
             server = http.createServer(app);
         }
