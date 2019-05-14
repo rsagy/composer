@@ -1,6 +1,6 @@
 {
   "name": "composer-rest-server",
-  "version": "0.20.8",
+  "version": "0.20.8-trade",
   "description": "Hyperledger Composer REST server that uses the Hyperledger Composer LoopBack connector",
   "engines": {
     "node": ">=8",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hyperledger/composer.git"
+    "url": "https://github.com/rsagy/composer.git"
   },
   "keywords": [
     "blockchain",
